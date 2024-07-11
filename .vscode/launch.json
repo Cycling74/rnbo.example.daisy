@@ -1,0 +1,61 @@
+{
+  "configurations": [
+    {
+      "configFiles": [
+        "interface/stlink.cfg",
+        "target/stm32h7x.cfg"
+      ],
+      "cwd": "${workspaceFolder}",
+      "debuggerArgs": [
+        "-d",
+        "${workspaceRoot}"
+      ],
+      "executable": "${workspaceRoot}/build/RNBO.elf",
+      "interface": "swd",
+      "name": "Cortex Attach",
+      "openOCDLaunchCommands": [
+        "gdb_breakpoint_override",
+      ],
+      "preRestartCommands": [
+        "enable breakpoint",
+      ],
+      "request": "attach",
+      "servertype": "openocd",
+      "showDevDebugOutput": "none",
+      "svdFile": "${workspaceRoot}/.vscode/STM32H750x.svd",
+      "type": "cortex-debug",
+    },
+    {
+      "configFiles": [
+        "interface/stlink.cfg",
+        "target/stm32h7x.cfg"
+      ],
+      "cwd": "${workspaceFolder}",
+      "debuggerArgs": [
+        "-d",
+        "${workspaceRoot}"
+      ],
+      "executable": "${workspaceRoot}/build/RNBO.elf",
+      "interface": "swd",
+      "name": "Cortex Debug",
+      "openOCDLaunchCommands": [
+        "init",
+        "reset init",
+        "gdb_breakpoint_override hard"
+      ],
+      "preLaunchTask": "build_and_program_dfu",
+      "preRestartCommands": [
+        "load",
+        "enable breakpoint",
+        "monitor reset"
+      ],
+      "request": "launch",
+      "runToMain": true,
+      "servertype": "openocd",
+      "showDevDebugOutput": "none",
+      "svdFile": "${workspaceRoot}/.vscode/STM32H750x.svd",
+      "type": "cortex-debug"
+    }
+  ],
+  "version": "0.2.0"
+}

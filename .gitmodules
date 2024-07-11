@@ -1,0 +1,6 @@
+[submodule "3rdparty/libDaisy"]
+	path = 3rdparty/libDaisy
+	url = https://github.com/electro-smith/libDaisy.git
+[submodule "3rdparty/tlsf"]
+	path = 3rdparty/tlsf
+	url = https://github.com/mattconte/tlsf.git
