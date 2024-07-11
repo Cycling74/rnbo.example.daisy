@@ -49,6 +49,14 @@ while this seems to work fine for now, and might match quite a few use cases, th
 was to deal with memory - if you are a Daisy dev and think there are better ways to handle this, we would 
 be really happy if you would reach out to us
 
+## Export
+
+RNBO C++ Source Code Export generated files need to go into the _export_ directory. Be aware that you need to
+use the "Minimal Export" feature introduced on the bare_metal branch to generate code that works with this example.
+
+Consider using a fixed vector size that matches the one set in the example (currently 64 samples, but feel free to 
+change it to your needs) for your export.
+
 ## Usage - Command Line
 
 before you can get started you have to build libDaisy
