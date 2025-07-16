@@ -22,7 +22,7 @@ out on your hardware, please contact us !
 
 Be sure to follow these instructions to get a fully working Daisy toolchain first:
 
-https://github.com/electro-smith/DaisyWiki/wiki/1.-Setting-Up-Your-Development-Environment
+https://daisy.audio/tutorials/cpp-dev-env/#1-install-the-toolchain
 
 please only try out this exmaple after you successfully exported a few Daisy examples on to your hardware.
 
