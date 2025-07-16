@@ -35,7 +35,7 @@ Installing the Daisy toolchain should already have equipped with all the necessa
 
 since RNBO patches can be quite large, we are using the boot loader
 
-https://electro-smith.github.io/libDaisy/md_doc_2md_2__a7___getting-_started-_daisy-_bootloader.html
+https://daisy.audio/tutorials/_a7_Getting-Started-Daisy-Bootloader/
 
 please follow the above instructions to flash the bootloader on your hardware
 
@@ -43,7 +43,7 @@ please follow the above instructions to flash the bootloader on your hardware
 
 In this example we move all audio sample allocations to Daisy SDRAM, based on this HowTo:
 
-https://electro-smith.github.io/libDaisy/md_doc_2md_2__a6___getting-_started-_external-_s_d_r_a_m.html
+https://daisy.audio/tutorials/_a6_Getting-Started-External-SDRAM/
 
 while this seems to work fine for now, and might match quite a few use cases, this might be not the best
 was to deal with memory - if you are a Daisy dev and think there are better ways to handle this, we would 
