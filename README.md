@@ -10,7 +10,7 @@ This should hopefully get you started on using RNBO on the Daisy Audio Platform 
 
 First things first: this is under heavy development, so use this at your own risk, it might suddenly crash, burn, glitch, annoy your cat - anything can happen
 
-to be able to use this you will have to obtain a specific beta build (bare_metal) through the RNBO beta list - if you are not already a member and are interested in taking part, pls contact us through: contact@cycling74.com
+This repository is meant as a starting point for C++ developers, if you simply want to get a RNBO patcher on a Daisy Seed or similar consider using oopsy: https://github.com/Cycling74/oopsy/tree/stb/RNBO
 
 ## Note
 
@@ -24,7 +24,7 @@ Be sure to follow these instructions to get a fully working Daisy toolchain firs
 
 https://daisy.audio/tutorials/cpp-dev-env/#1-install-the-toolchain
 
-please only try out this exmaple after you successfully exported a few Daisy examples on to your hardware.
+please only try out this example after you successfully exported a few Daisy examples on to your hardware.
 
 ## Installation
 
@@ -37,7 +37,7 @@ since RNBO patches can be quite large, we are using the boot loader
 
 https://daisy.audio/tutorials/_a7_Getting-Started-Daisy-Bootloader/
 
-please follow the above instructions to flash the bootloader on your hardware
+The simplest way to flash the bootloader onto your device is the Daisy Web Programmer, at the time of writing residing here: https://flash.daisy.audio/ - look for the bootloader tab and follow the instructions.
 
 ### Memory
 
@@ -52,7 +52,7 @@ be really happy if you would reach out to us
 ## Export
 
 RNBO C++ Source Code Export generated files need to go into the _export_ directory. Be aware that you need to
-use the "Minimal Export" feature introduced on the bare_metal branch to generate code that works with this example.
+use the "Minimal Export" feature to generate code that works with this example.
 
 Consider using a fixed vector size that matches the one set in the example (currently 64 samples, but feel free to 
 change it to your needs) for your export.
@@ -79,13 +79,13 @@ Notice: The Daisy Seed LED will be the “breathing” LED indicating the Daisy 
 
 ## Usage Visual Studio Code
 
-You will have noticed that there is a .vscode directory, containg a tasks and some cortext debug settings. If
+You will have noticed that there is a .vscode directory, containing a tasks and some cortex debug settings. If
 installed VSCode though the above toolchain link, they might come handy:
 
 - Open the rnbo.example.daisy folder in VS Code
 - Ctrl-P and write _task_
 
-and then you should already see the options, you will ahve to start with
+and then you should already see the options, you will have to start with
 
     task build_libdaisy
 
