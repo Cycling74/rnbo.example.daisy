@@ -10,7 +10,7 @@ This should hopefully get you started on using RNBO on the Daisy Audio Platform 
 
 First things first: this is under heavy development, so use this at your own risk, it might suddenly crash, burn, glitch, annoy your cat - anything can happen
 
-This repository is meant as a starting point for C++ developers, if you simply want to get a RNBO patcher on a Daisy Seed or similar consider using oopsy: https://github.com/Cycling74/oopsy/tree/stb/RNBO
+This repository is meant as a starting point for C++ developers, if you simply want to get a RNBO patcher on a Daisy Seed or similar consider using oopsy: https://github.com/Cycling74/oopsy/
 
 ## Note
 
