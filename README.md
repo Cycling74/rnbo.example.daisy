@@ -1,5 +1,7 @@
 # RNBO for the Daisy Audio Platform
 
+This is a fork of Cycling '74's repository edited by Matthew J. Carpenter.
+
 ## Author
 
 Stefan Brunner - stb@cycling74.com
@@ -22,7 +24,7 @@ out on your hardware, please contact us !
 
 Be sure to follow these instructions to get a fully working Daisy toolchain first:
 
-https://daisy.audio/tutorials/cpp-dev-env/#1-install-the-toolchain
+[https://daisy.audio/tutorials/cpp-dev-env/#1-install-the-toolchain](https://docs.daisy.audio/tutorials/cpp-dev-env/#1-install-the-toolchain)
 
 please only try out this example after you successfully exported a few Daisy examples on to your hardware.
 
@@ -34,8 +36,8 @@ Installing the Daisy toolchain should already have equipped with all the necessa
 ### Bootloader
 
 since RNBO patches can be quite large, we are using the boot loader
-
-https://daisy.audio/tutorials/_a7_Getting-Started-Daisy-Bootloader/
+[
+https://daisy.audio/tutorials/_a7_Getting-Started-Daisy-Bootloader/](https://docs.daisy.audio/tutorials/_a7_Getting-Started-Daisy-Bootloader/)
 
 The simplest way to flash the bootloader onto your device is the Daisy Web Programmer, at the time of writing residing here: https://flash.daisy.audio/ - look for the bootloader tab and follow the instructions.
 
@@ -43,7 +45,7 @@ The simplest way to flash the bootloader onto your device is the Daisy Web Progr
 
 In this example we move all audio sample allocations to Daisy SDRAM, based on this HowTo:
 
-https://daisy.audio/tutorials/_a6_Getting-Started-External-SDRAM/
+[https://daisy.audio/tutorials/_a6_Getting-Started-External-SDRAM/](https://docs.daisy.audio/tutorials/_a6_Getting-Started-External-SDRAM/)
 
 while this seems to work fine for now, and might match quite a few use cases, this might be not the best
 was to deal with memory - if you are a Daisy dev and think there are better ways to handle this, we would 
@@ -59,10 +61,24 @@ change it to your needs) for your export.
 
 ## Usage - Command Line
 
+clone this repository once per project into dedicated project folder
+
+    gh repo clone Cycling74/rnbo.example.daisy
+
+ensure that /rnbo.example.daisy/3rdparty/libDaisy has populated by running this command in the repo root folder
+
+    git submodule update --init --recursive
+
 before you can get started you have to build libDaisy
 
     cd 3rdparty/libDaisy/
     make
+
+export your RNBO patch to C++ in "Minimal Export" mode to /rnbo.example.daisy/export
+
+ensure that exported C++ code is titled "rnbo_source.h" OR change line 9 of /rnbo.example.daisy/RNBO.cpp to address header filename:
+
+    #include "export/rnbo_source.h"
 
 now go back to the repo root dir and type
 
